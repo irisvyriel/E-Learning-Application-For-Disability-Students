@@ -1,0 +1,215 @@
+/* Style untuk Tampilan Umum */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px; /* Menghindari footer menutupi konten */
+}
+
+/* Header dan Tombol Kembali */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; 
+}
+
+.header .back-button {
+    position: absolute;
+    left: 10px; 
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+}
+
+.language-selection {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.language-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, border-bottom 0.3s;
+}
+
+.language-button.active {
+    background-color: white;
+    border-bottom: 3px solid #007bff;
+}
+
+/* Desain untuk Card Subject */
+.subject-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efek hover */
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.subject-card-title {
+    font-size: 15px;
+    margin: 0;
+    color: #333;
+}
+
+.card-title {
+    font-size: 15px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-duration {
+    color: gray;
+    font-size: 14px;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.icon-button {
+    background-color: #3b82f6;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.icon-button:hover {
+    background-color: #2563eb;
+}
+
+/* Footer dan Navigasi */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Pastikan footer selalu di atas */
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.mic-button {
+    background-color: #ff4d6d;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
+/* Media Query untuk Tablet */
+@media (max-width: 768px) {
+    .card {
+        width: 80%; /* Perbesar kartu di layar tablet */
+    }
+
+    .header h1 {
+        font-size: 20px; /* Sesuaikan ukuran font judul */
+    }
+
+    .language-button {
+        font-size: 14px; /* Sesuaikan ukuran teks tombol */
+        padding: 8px 15px;
+    }
+}
+
+/* Media Query untuk Smartphone */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 14px; /* Sesuaikan ukuran font judul */
+    }
+
+    .card {
+        width: 95%; /* Lebar kartu hampir penuh pada layar kecil */
+        margin: 10px 0;
+    }
+
+    .subject-card-title, .card-title, .card-duration {
+        font-size: 14px; /* Sesuaikan ukuran teks */
+    }
+
+    .icon-button {
+        padding: 8px; /* Sesuaikan ukuran tombol ikon */
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 5px 10px; /* Kurangi padding pada footer */
+    }
+
+    .nav-button, .mic-button {
+        font-size: 18px; /* Sesuaikan ukuran ikon pada tombol footer */
+    }
+}
